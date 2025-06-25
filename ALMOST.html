@@ -1,0 +1,641 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta name="description" content="Portfolio of Amal Anil Kumar, a skilled UI/UX designer specializing in intuitive digital experiences, branding, and mobile app design.">
+<meta name="keywords" content="UI/UX Design, Branding, Mobile App Design, Portfolio, Amal Anil Kumar">
+<meta name="author" content="Amal Anil Kumar">
+<title>Amal's Portfolio</title>
+<script src="https://cdn.tailwindcss.com/3.4.16"></script>
+<script>tailwind.config={theme:{extend:{colors:{primary:'#57b5e7',secondary:'#fbd1c6'},borderRadius:{'none':'0px','sm':'4px',DEFAULT:'8px','md':'12px','lg':'16px','xl':'20px','2xl':'24px','3xl':'32px','full':'9999px','button':'8px'}}}}</script>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Pacifico&display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/remixicon/4.6.0/remixicon.min.css">
+<style>
+      html {
+      scroll-behavior: smooth;
+      scroll-padding-top: 60px; /* height of your fixed navbar */
+    }
+:where([class^="ri-"])::before { content: "\f3c2"; }
+body {
+font-family: 'Inter', sans-serif;
+color: #1f2937;
+}
+   .nav-link.active::after, .nav-link:hover::after { width: 100%; }
+.nav-link {
+position: relative;
+}
+.nav-link::after {
+content: '';
+position: absolute;
+width: 0;
+height: 2px;
+bottom: -4px;
+left: 0;
+background-color: #57b5e7;
+transition: width 0.3s ease;
+}
+.nav-link.active::after,
+.nav-link:hover::after {
+width: 100%;
+}
+.project-card {
+transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+.project-card:hover {
+transform: translateY(-5px);
+box-shadow: 0 10px 25px -5px rgba(0, 0, 0, 0.1);
+}
+input:focus, textarea:focus {
+outline: none;
+border-color: #57b5e7;
+}
+.custom-checkbox {
+appearance: none;
+-webkit-appearance: none;
+width: 20px;
+height: 20px;
+border: 2px solid #d1d5db;
+border-radius: 4px;
+outline: none;
+cursor: pointer;
+position: relative;
+}
+.custom-checkbox:checked {
+background-color: #57b5e7;
+border-color: #57b5e7;
+}
+.custom-checkbox:checked::before {
+content: '';
+position: absolute;
+top: 50%;
+left: 50%;
+transform: translate(-50%, -50%);
+width: 10px;
+height: 10px;
+background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' fill='none' viewBox='0 0 24 24' stroke='white' stroke-width='3'%3E%3Cpath stroke-linecap='round' stroke-linejoin='round' d='M5 13l4 4L19 7' /%3E%3C/svg%3E");
+background-size: contain;
+background-repeat: no-repeat;
+}
+.custom-radio {
+appearance: none;
+-webkit-appearance: none;
+width: 20px;
+height: 20px;
+border: 2px solid #d1d5db;
+border-radius: 50%;
+outline: none;
+cursor: pointer;
+position: relative;
+}
+.custom-radio:checked {
+border-color: #57b5e7;
+}
+.custom-radio:checked::before {
+content: '';
+position: absolute;
+top: 50%;
+left: 50%;
+transform: translate(-50%, -50%);
+width: 10px;
+height: 10px;
+background-color: #57b5e7;
+border-radius: 50%;
+}
+.custom-switch {
+position: relative;
+display: inline-block;
+width: 48px;
+height: 24px;
+}
+.custom-switch input {
+opacity: 0;
+width: 0;
+height: 0;
+}
+.switch-slider {
+position: absolute;
+cursor: pointer;
+top: 0;
+left: 0;
+right: 0;
+bottom: 0;
+background-color: #e5e7eb;
+transition: .4s;
+border-radius: 24px;
+}
+.switch-slider:before {
+position: absolute;
+content: "";
+height: 18px;
+width: 18px;
+left: 3px;
+bottom: 3px;
+background-color: white;
+transition: .4s;
+border-radius: 50%;
+}
+input:checked + .switch-slider {
+background-color: #57b5e7;
+}
+input:checked + .switch-slider:before {
+transform: translateX(24px);
+}
+.custom-range {
+-webkit-appearance: none;
+width: 100%;
+height: 6px;
+background: #e5e7eb;
+border-radius: 5px;
+outline: none;
+}
+.custom-range::-webkit-slider-thumb {
+-webkit-appearance: none;
+appearance: none;
+width: 18px;
+height: 18px;
+background: #57b5e7;
+border-radius: 50%;
+cursor: pointer;
+}
+.custom-range::-moz-range-thumb {
+width: 18px;
+height: 18px;
+background: #57b5e7;
+border-radius: 50%;
+cursor: pointer;
+border: none;
+}
+.tab-button {
+transition: all 0.3s ease;
+}
+.tab-button.active {
+background-color: #57b5e7;
+color: white;
+}
+  </style>
+</head>
+<body class="min-h-screen bg-white overflow-x-hidden scroll-smooth">
+
+
+<!-- Navigation -->
+<!-- Navigation -->
+<nav class="fixed top-0 left-0 right-0 bg-white/90 backdrop-blur-sm z-50 shadow-sm">
+  <div class="container mx-auto px-4 py-4 flex items-center justify-between">
+
+    <!-- Left section: Hamburger (mobile only) + Logo -->
+    <div class="flex items-center gap-2 h-full">
+      <!-- Hamburger (Mobile Only) -->
+      <button id="menu-toggle" class="md:hidden focus:outline-none z-50 relative w-8 h-full flex flex-col justify-center items-center">
+        <span id="line1" class="block h-0.5 w-6 bg-gray-800 transform transition duration-300 ease-in-out"></span>
+        <span id="line2" class="block h-0.5 w-6 bg-gray-800 my-[5px] transform transition duration-300 ease-in-out"></span>
+        <span id="line3" class="block h-0.5 w-6 bg-gray-800 transform transition duration-300 ease-in-out"></span>
+      </button>
+
+    <!-- Logo -->
+      <a href="#" id="logo" class="text-xl sm:text-2xl font-['Pacifico'] text-primary relative group whitespace-nowrap">
+        <span class="relative inline-block ml-1 text-gray-800">Amal Anil Kumar</span>
+      </a>
+    </div>
+
+
+    <!-- Desktop Menu -->
+    <div class="hidden md:flex items-center space-x-6">
+      <a href="#home" class="nav-link text-gray-800 hover:text-primary transition-colors">Home</a>
+      <a href="#work" class="nav-link text-gray-800 hover:text-primary transition-colors">Work</a>
+      <a href="#about" class="nav-link text-gray-800 hover:text-primary transition-colors">About</a>
+   <a href="#contact" class="px-4 py-2 bg-primary text-white rounded-button hover:bg-primary/90 transition-colors">
+  Contact Me
+</a>
+    </div>
+  </div>
+</nav>
+
+<!-- Overlay -->
+<div id="overlay" class="fixed inset-0 bg-black bg-opacity-50 hidden z-40 md:hidden transition-opacity duration-300 ease-in-out"></div>
+
+<!-- Mobile Menu (starts below the nav) -->
+<div id="mobile-menu" style="top: 59.8px;" class="md:hidden fixed left-0 h-full w-2/3 max-w-sm bg-white shadow-lg transform -translate-x-full transition-transform duration-300 ease-in-out z-50 flex flex-col px-6 py-6 space-y-6">
+  <a href="#home" class="text-gray-800 hover:text-primary transition-transform transform duration-300 ease-in-out hover:scale-105">Home</a>
+  <a href="#work" class="text-gray-800 hover:text-primary transition-transform transform duration-300 ease-in-out hover:scale-105">Work</a>
+  <a href="#about" class="text-gray-800 hover:text-primary transition-transform transform duration-300 ease-in-out hover:scale-105">About</a>
+  <a href="#contact" class="text-gray-800 hover:text-primary transition-transform transform duration-300 ease-in-out hover:scale-105">Contact Me</a>
+</div>
+
+<!-- Script -->
+<script>
+  const toggleBtn = document.getElementById("menu-toggle");
+  const mobileMenu = document.getElementById("mobile-menu");
+  const overlay = document.getElementById("overlay");
+
+  const line1 = document.getElementById("line1");
+  const line2 = document.getElementById("line2");
+  const line3 = document.getElementById("line3");
+
+  const closeMenu = () => {
+    mobileMenu.classList.add("-translate-x-full");
+    mobileMenu.classList.remove("translate-x-0");
+    overlay.classList.add("hidden");
+
+    line1.classList.remove("rotate-45", "translate-y-[7px]");
+    line2.classList.remove("opacity-0");
+    line3.classList.remove("-rotate-45", "-translate-y-[7px]");
+  };
+
+  toggleBtn.addEventListener("click", () => {
+    const isOpen = mobileMenu.classList.contains("translate-x-0");
+
+    if (isOpen) {
+      closeMenu();
+    } else {
+      mobileMenu.classList.remove("-translate-x-full");
+      mobileMenu.classList.add("translate-x-0");
+      overlay.classList.remove("hidden");
+
+      line1.classList.add("rotate-45", "translate-y-[7px]");
+      line2.classList.add("opacity-0");
+      line3.classList.add("-rotate-45", "-translate-y-[7px]");
+    }
+  });
+
+  overlay.addEventListener("click", closeMenu);
+  document.querySelectorAll('#mobile-menu a').forEach(link => {
+    link.addEventListener('click', closeMenu);
+  });
+</script>
+
+<!-- Home Page -->
+<section id="home" class="min-h-screen pt-24 pb-16 relative overflow-hidden">
+<div class="absolute inset-0 bg-cover bg-center" style="background-image: url('https://readdy.ai/api/search-image?query=Minimalist%20abstract%20background%20with%20soft%20pastel%20blue%20and%20peach%20gradient%2C%20geometric%20shapes%2C%20subtle%20patterns%2C%20clean%20design%20aesthetic%2C%20professional%20look%2C%20light%20theme%2C%20airy%20feeling%2C%20with%20empty%20space%20on%20the%20left%20side%20for%20text%20content&width=1920&height=1080&seq=1&orientation=landscape'); opacity: 0.15;"></div>
+<div class="container mx-auto px-6 relative z-10">
+<div class="flex flex-col lg:flex-row items-center w-full">
+<div class="lg:w-1/2 mb-12 lg:mb-0">
+<h1 class="text-5xl md:text-6xl font-bold mb-6 leading-tight">Creating Digital <span class="text-primary">Experiences</span> That Matter</h1>
+<p class="text-xl text-gray-600 mb-8 max-w-xl">I'm a UI/UX designer and creative professional focused on crafting intuitive, user-centered digital solutions that blend aesthetics with functionality.</p>
+<div class="flex flex-wrap gap-4">
+<a href="#work" class="px-6 py-3 bg-primary text-white rounded-button hover:bg-primary/90 transition-colors shadow-md whitespace-nowrap">My Works</a>
+<a href="#about" class="px-6 py-3 border border-gray-300 rounded-button hover:border-primary hover:text-primary transition-colors whitespace-nowrap">About Me</a>
+</div>
+</div>
+<div class="lg:w-1/2 flex justify-center">
+<img src="https://images.pexels.com/photos/196646/pexels-photo-196646.jpeg" alt="Workplace" class="rounded-2xl shadow-xl w-full max-w-md object-cover object-top">
+</div>
+</div>
+<div class="mt-24 mb-12">
+<h2 class="text-3xl font-semibold text-center mb-4">What's my Interests</h2>
+<p class="text-gray-600 text-center max-w-2xl mx-auto mb-12">Bringing together creativity and functionality to create meaningful digital experiences</p>
+<div class="grid grid-cols-1 md:grid-cols-3 gap-8">
+<div class="bg-white p-8 rounded-xl shadow-md hover:shadow-lg transition-shadow">
+<div class="w-14 h-14 bg-blue-50 rounded-full flex items-center justify-center mb-6">
+<i class="ri-layout-4-line text-primary ri-xl"></i>
+</div>
+<h3 class="text-xl font-semibold mb-3">UI/UX Design</h3>
+<p class="text-gray-600">Creating intuitive interfaces and seamless user experiences that engage and delight. Creating intuitive interfaces and seamless user experiences that engage and delight</p>
+</div>
+<div class="bg-white p-8 rounded-xl shadow-md hover:shadow-lg transition-shadow">
+<div class="w-14 h-14 bg-blue-50 rounded-full flex items-center justify-center mb-6">
+<i class="ri-paint-brush-line text-primary ri-xl"></i>
+</div>
+<h3 class="text-xl font-semibold mb-3">Brand Identity</h3>
+<p class="text-gray-600">Developing cohesive visual identities that communicate your brand's unique story. Developing cohesive visual identities that communicate your brand's unique story</p>
+</div>
+<div class="bg-white p-8 rounded-xl shadow-md hover:shadow-lg transition-shadow">
+<div class="w-14 h-14 bg-blue-50 rounded-full flex items-center justify-center mb-6">
+<i class="ri-smartphone-line text-primary ri-xl"></i>
+</div>
+<h3 class="text-xl font-semibold mb-3">Mobile App Design</h3>
+<p class="text-gray-600">Designing beautiful, functional mobile experiences that users love to interact with.Designing beautiful, functional mobile experiences that users love to interact with</p>
+</div>
+</div>
+</div>
+</div>
+</section>
+<!-- Work Page -->
+<!-- Work Page -->
+<section id="work" class="min-h-screen py-24 bg-gray-50">
+  <div class="w-full px-4 sm:px-6 lg:px-12">
+    <div class="text-center mb-16 max-w-4xl mx-auto">
+      <h2 class="text-4xl font-bold mb-4">My Work</h2>
+      <p class="text-xl text-gray-600 max-w-2xl mx-auto">Recent projects and creative explorations</p>
+      <a href="https://drive.google.com/file/d/10f0YZWBIV737OHn8Uh1hl8Ss9IJMGdVd/view?usp=drivesdk" download class="inline-flex items-center mt-6 px-5 py-2.5 bg-white border border-gray-300 rounded-button hover:border-primary hover:text-primary transition-colors whitespace-nowrap">
+  <i class="ri-download-line mr-2"></i> Download My Resume
+</a>
+    </div>
+
+    <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8 max-w-7xl mx-auto">
+      <!-- Project 1 -->
+      <div class="project-card bg-white rounded-xl overflow-hidden shadow-md">
+        <div class="h-60 overflow-hidden">
+          <img src="https://readdy.ai/api/search-image?query=Modern%20finance%20app%20UI%20design%20with%20clean%20interface%2C%20dashboard%20showing%20charts%20and%20statistics%2C%20light%20theme%20with%20blue%20accents%2C%20professional%20fintech%20application%20interface%20on%20smartphone%20screen%2C%20high-quality%20UI%20mockup&width=600&height=400&seq=3&orientation=landscape" alt="Finance App UI" class="w-full h-full object-cover object-top">
+        </div>
+        <div class="p-6">
+          <h3 class="text-xl font-semibold mb-2">Finance Dashboard App</h3>
+          <p class="text-gray-600 mb-4">A comprehensive financial management application with intuitive data visualization and personal budgeting tools.</p>
+          <div class="flex flex-wrap gap-2 mb-4">
+            <span class="px-3 py-1 bg-blue-50 text-primary text-sm rounded-full">Figma</span>
+            <span class="px-3 py-1 bg-blue-50 text-primary text-sm rounded-full">UI/UX</span>
+            <span class="px-3 py-1 bg-blue-50 text-primary text-sm rounded-full">Mobile</span>
+          </div>
+          <a href="#" class="text-primary hover:underline inline-flex items-center">
+            View Case Study <i class="ri-arrow-right-line ml-1"></i>
+          </a>
+        </div>
+      </div>
+
+      <!-- Project 2 -->
+      <div class="project-card bg-white rounded-xl overflow-hidden shadow-md">
+        <div class="h-60 overflow-hidden">
+          <img src="https://readdy.ai/api/search-image?query=Elegant%20brand%20identity%20design%20for%20a%20luxury%20spa%2C%20showing%20logo%2C%20business%20cards%2C%20and%20packaging%20with%20soft%20pastel%20colors%2C%20minimalist%20aesthetic%2C%20professional%20branding%20materials%20displayed%20on%20light%20background%2C%20high-quality%20mockup&width=600&height=400&seq=4&orientation=landscape" alt="Spa Branding" class="w-full h-full object-cover object-top">
+        </div>
+        <div class="p-6">
+          <h3 class="text-xl font-semibold mb-2">Serene Spa Branding</h3>
+          <p class="text-gray-600 mb-4">Complete brand identity for a luxury wellness spa, including logo design, color palette, and marketing materials.</p>
+          <div class="flex flex-wrap gap-2 mb-4">
+            <span class="px-3 py-1 bg-blue-50 text-primary text-sm rounded-full">Illustrator</span>
+            <span class="px-3 py-1 bg-blue-50 text-primary text-sm rounded-full">Branding</span>
+            <span class="px-3 py-1 bg-blue-50 text-primary text-sm rounded-full">Identity</span>
+          </div>
+          <a href="#" class="text-primary hover:underline inline-flex items-center">
+            View Case Study <i class="ri-arrow-right-line ml-1"></i>
+          </a>
+        </div>
+      </div>
+
+      <!-- Project 3 -->
+      <div class="project-card bg-white rounded-xl overflow-hidden shadow-md">
+        <div class="h-60 overflow-hidden">
+          <img src="https://readdy.ai/api/search-image?query=Modern%20e-commerce%20website%20design%20for%20fashion%20store%2C%20showing%20product%20grid%20layout%2C%20clean%20navigation%2C%20shopping%20cart%20interface%2C%20light%20theme%20with%20minimal%20design%2C%20responsive%20web%20design%20on%20desktop%20screen%2C%20high-quality%20UI%20mockup&width=600&height=400&seq=5&orientation=landscape" alt="E-commerce Website" class="w-full h-full object-cover object-top">
+        </div>
+        <div class="p-6">
+          <h3 class="text-xl font-semibold mb-2">Fashion E-commerce Platform</h3>
+          <p class="text-gray-600 mb-4">Responsive e-commerce website design with streamlined checkout process and personalized product recommendations.</p>
+          <div class="flex flex-wrap gap-2 mb-4">
+            <span class="px-3 py-1 bg-blue-50 text-primary text-sm rounded-full">Figma</span>
+            <span class="px-3 py-1 bg-blue-50 text-primary text-sm rounded-full">UI/UX</span>
+            <span class="px-3 py-1 bg-blue-50 text-primary text-sm rounded-full">Web</span>
+          </div>
+          <a href="#" class="text-primary hover:underline inline-flex items-center">
+            View Case Study <i class="ri-arrow-right-line ml-1"></i>
+          </a>
+        </div>
+      </div>
+
+      <!-- Project 4 -->
+      <div class="project-card bg-white rounded-xl overflow-hidden shadow-md">
+        <div class="h-60 overflow-hidden">
+          <img src="https://readdy.ai/api/search-image?query=Creative%20event%20poster%20design%20for%20music%20festival%2C%20vibrant%20colors%20with%20geometric%20patterns%2C%20modern%20typography%2C%20clean%20layout%20with%20clear%20hierarchy%2C%20professional%20graphic%20design%20on%20light%20background%2C%20high-quality%20print%20design%20mockup&width=600&height=400&seq=6&orientation=landscape" alt="Event Poster" class="w-full h-full object-cover object-top">
+        </div>
+        <div class="p-6">
+          <h3 class="text-xl font-semibold mb-2">Summer Music Festival Poster</h3>
+          <p class="text-gray-600 mb-4">Vibrant poster design for an annual music festival featuring custom typography and geometric visual elements.</p>
+          <div class="flex flex-wrap gap-2 mb-4">
+            <span class="px-3 py-1 bg-blue-50 text-primary text-sm rounded-full">Photoshop</span>
+            <span class="px-3 py-1 bg-blue-50 text-primary text-sm rounded-full">Illustration</span>
+            <span class="px-3 py-1 bg-blue-50 text-primary text-sm rounded-full">Print</span>
+          </div>
+          <a href="#" class="text-primary hover:underline inline-flex items-center">
+            View Case Study <i class="ri-arrow-right-line ml-1"></i>
+          </a>
+        </div>
+      </div>
+
+      <!-- Project 5 -->
+      <div class="project-card bg-white rounded-xl overflow-hidden shadow-md">
+        <div class="h-60 overflow-hidden">
+          <img src="https://readdy.ai/api/search-image?query=Health%20and%20fitness%20app%20UI%20design%20showing%20workout%20tracking%2C%20meal%20planning%2C%20and%20progress%20statistics%2C%20clean%20interface%20with%20blue%20and%20white%20color%20scheme%2C%20modern%20mobile%20application%20design%20on%20smartphone%20screen%2C%20high-quality%20UI%20mockup&width=600&height=400&seq=7&orientation=landscape" alt="Fitness App" class="w-full h-full object-cover object-top">
+        </div>
+        <div class="p-6">
+          <h3 class="text-xl font-semibold mb-2">FitTrack Wellness App</h3>
+          <p class="text-gray-600 mb-4">Comprehensive fitness application with workout tracking, meal planning, and progress visualization features.</p>
+          <div class="flex flex-wrap gap-2 mb-4">
+            <span class="px-3 py-1 bg-blue-50 text-primary text-sm rounded-full">Figma</span>
+            <span class="px-3 py-1 bg-blue-50 text-primary text-sm rounded-full">UI/UX</span>
+            <span class="px-3 py-1 bg-blue-50 text-primary text-sm rounded-full">Mobile</span>
+          </div>
+          <a href="#" class="text-primary hover:underline inline-flex items-center">
+            View Case Study <i class="ri-arrow-right-line ml-1"></i>
+          </a>
+        </div>
+      </div>
+
+      <!-- Project 6 -->
+      <div class="project-card bg-white rounded-xl overflow-hidden shadow-md">
+        <div class="h-60 overflow-hidden">
+          <img src="https://readdy.ai/api/search-image?query=Cryptocurrency%20dashboard%20concept%20with%20market%20trends%2C%20portfolio%20tracking%2C%20and%20transaction%20history%2C%20modern%20interface%20with%20data%20visualization%2C%20clean%20design%20with%20blue%20accent%20colors%2C%20professional%20fintech%20application%20on%20desktop%20screen%2C%20high-quality%20UI%20mockup&width=600&height=400&seq=8&orientation=landscape" alt="Crypto Dashboard" class="w-full h-full object-cover object-top">
+        </div>
+        <div class="p-6">
+          <h3 class="text-xl font-semibold mb-2">Crypto Portfolio Dashboard</h3>
+          <p class="text-gray-600 mb-4">Cryptocurrency tracking platform with real-time market data, portfolio management, and transaction history.</p>
+          <div class="flex flex-wrap gap-2 mb-4">
+            <span class="px-3 py-1 bg-blue-50 text-primary text-sm rounded-full">Figma</span>
+            <span class="px-3 py-1 bg-blue-50 text-primary text-sm rounded-full">UI/UX</span>
+            <span class="px-3 py-1 bg-blue-50 text-primary text-sm rounded-full">Web</span>
+          </div>
+          <a href="#" class="text-primary hover:underline inline-flex items-center">
+            View Case Study <i class="ri-arrow-right-line ml-1"></i>
+          </a>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+<!-- About Page -->
+<section id="about" class="min-h-screen py-24">
+<div class="container mx-auto px-6">
+<div class="flex flex-col lg:flex-row items-center gap-12">
+<div class="lg:w-2/5">
+<img src="https://res.cloudinary.com/dsbpdcov9/image/upload/v1750763620/IMG_20250624_164316_w3u9vg.jpg" alt="Amal's Portrait" class="rounded-2xl shadow-lg w-full max-w-md mx-auto">
+</div>
+<div class="lg:w-3/5">
+<h2 class="text-4xl font-bold mb-6">Hi, I'm Amal</h2>
+<p class="text-xl text-gray-600 mb-6">A passionate UI/UX designer with a background in visual arts and a love for creating intuitive digital experiences.</p>
+<div class="mb-8">
+<h3 class="text-2xl font-semibold mb-4">My Journey</h3>
+<p class="text-gray-600 mb-4">I began my career as a freelance designer in the cryptocurrency space, creating interfaces for blockchain applications and fintech startups. This experience gave me a unique perspective on balancing complex functionality with user-friendly design.</p>
+<p class="text-gray-600 mb-4">After several years in the industry, I decided to formalize my education by completing the Google UX Design Certificate, which helped me refine my process and expand my skill set.</p>
+<p class="text-gray-600">Today, I combine my technical knowledge with creative problem-solving to design digital products that are both beautiful and functional.</p>
+</div>
+<div class="mb-8">
+<h3 class="text-2xl font-semibold mb-4">My Design Philosophy</h3>
+<p class="text-gray-600">I believe that great design is invisible. It should guide users intuitively, solve real problems, and create delightful experiences without calling attention to itself. Every pixel has a purpose, and every interaction should feel natural and rewarding.</p>
+</div>
+<div class="mb-8">
+<h3 class="text-2xl font-semibold mb-4">Skills & Tools</h3>
+<div class="grid grid-cols-2 md:grid-cols-3 gap-4">
+<div class="flex items-center gap-3">
+<div class="w-10 h-10 bg-blue-50 rounded-full flex items-center justify-center">
+<i class="ri-figma-line text-primary"></i>
+</div>
+<span>Figma</span>
+</div>
+<div class="flex items-center gap-3">
+<div class="w-10 h-10 bg-blue-50 rounded-full flex items-center justify-center">
+<i class="ri-photoshop-line text-primary"></i>
+</div>
+<span>Photoshop</span>
+</div>
+<div class="flex items-center gap-3">
+<div class="w-10 h-10 bg-blue-50 rounded-full flex items-center justify-center">
+<i class="ri-illustrator-line text-primary"></i>
+</div>
+<span>Illustrator</span>
+</div>
+<div class="flex items-center gap-3">
+<div class="w-10 h-10 bg-blue-50 rounded-full flex items-center justify-center">
+<i class="ri-sketch-line text-primary"></i>
+</div>
+<span>Sketch</span>
+</div>
+<div class="flex items-center gap-3">
+<div class="w-10 h-10 bg-blue-50 rounded-full flex items-center justify-center">
+<i class="ri-code-line text-primary"></i>
+</div>
+<span>HTML/CSS</span>
+</div>
+<div class="flex items-center gap-3">
+<div class="w-10 h-10 bg-blue-50 rounded-full flex items-center justify-center">
+<i class="ri-prototype-line text-primary"></i>
+</div>
+<span>Prototyping</span>
+</div>
+</div>
+</div>
+</div>
+</div>
+<!-- Contact Section -->
+<section id="contact" class="mt-24 bg-gray-50 rounded-2xl p-8 md:p-12">
+  <div class="text-center mb-12">
+    <h2 class="text-3xl font-bold mb-4">Let's Work Together</h2>
+    <p class="text-xl text-gray-600 max-w-2xl mx-auto">
+      Have a project in mind or just want to connect? I'd love to hear from you!
+    </p>
+  </div>
+
+  <div class="max-w-2xl mx-auto">
+    <div>
+      <h3 class="text-2xl font-semibold mb-6">Get in Touch</h3>
+      <div class="space-y-4">
+        <div class="flex items-center gap-4">
+          <div class="w-12 h-12 bg-white rounded-full shadow-sm flex items-center justify-center">
+            <i class="ri-mail-line text-primary ri-lg"></i>
+          </div>
+          <div>
+            <p class="text-sm text-gray-500">Email</p>
+            <a href="mailto:helloamalux@gmail.com" class="font-medium">helloamalux@gmail.com</a>
+
+          </div>
+        </div>
+
+        <div class="flex items-center gap-4">
+          <div class="w-12 h-12 bg-white rounded-full shadow-sm flex items-center justify-center">
+            <i class="ri-smartphone-line text-primary ri-lg"></i>
+          </div>
+          <div>
+            <p class="text-sm text-gray-500">Phone</p>
+            <p class="font-medium">+91 9947621311</p>
+          </div>
+        </div>
+
+        <div class="flex items-center gap-4">
+          <div class="w-12 h-12 bg-white rounded-full shadow-sm flex items-center justify-center">
+            <i class="ri-map-pin-line text-primary ri-lg"></i>
+          </div>
+          <div>
+            <p class="text-sm text-gray-500">Location</p>
+            <p class="font-medium">Kerala, IND</p>
+          </div>
+        </div>
+      </div>
+
+      <div class="mt-8">
+        <h4 class="font-semibold mb-4"></h4>
+        <div class="flex gap-4">
+          <a href="https://www.linkedin.com/in/amal-anilkumar-ux/" class="w-10 h-10 bg-white rounded-full shadow-sm flex items-center justify-center hover:bg-primary hover:text-white transition-colors">
+            <i class="ri-linkedin-line"></i>
+          </a>
+          <a href="#" class="w-10 h-10 bg-white rounded-full shadow-sm flex items-center justify-center hover:bg-primary hover:text-white transition-colors">
+            <i class="ri-dribbble-line"></i>
+          </a>
+          <a href="#" class="w-10 h-10 bg-white rounded-full shadow-sm flex items-center justify-center hover:bg-primary hover:text-white transition-colors">
+            <i class="ri-behance-line"></i>
+          </a>
+          <a href="https://www.instagram.com/amalehh_?igsh=bWdhanY3OTY0bmFu" class="w-10 h-10 bg-white rounded-full shadow-sm flex items-center justify-center hover:bg-primary hover:text-white transition-colors">
+            <i class="ri-instagram-line"></i>
+          </a>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+<!-- Footer -->
+ </section>
+<footer class="bg-gray-900 text-white py-12 w-full">
+  <div class="px-6">
+    <div class="max-w-screen-xl mx-auto flex flex-col md:flex-row justify-between items-center text-center md:text-left">
+      <h2 class="text-2xl font-['Pacifico'] text-gray-300 mb-4 md:mb-0">Amal Anilkumar</h2>
+      <p class="text-gray-600">© 2025 Amal Anilkumar. All rights reserved.</p>
+    </div>
+  </div>
+</footer>
+</section>
+
+<script id="navigation">
+document.addEventListener('DOMContentLoaded', function() {
+const sections = document.querySelectorAll('section');
+const navLinks = document.querySelectorAll('.nav-link');
+const logo = document.getElementById('logo');
+logo.addEventListener('click', function(e) {
+e.preventDefault();
+window.scrollTo({
+top: 0,
+behavior: 'smooth'
+});
+});
+function setActiveLink() {
+let current = '';
+sections.forEach(section => {
+const sectionTop = section.offsetTop;
+const sectionHeight = section.clientHeight;
+if (window.scrollY >= (sectionTop - 200)) {
+current = section.getAttribute('id');
+}
+});
+navLinks.forEach(link => {
+link.classList.remove('active');
+if (link.getAttribute('href') === `#${current}`) {
+link.classList.add('active');
+}
+});
+}
+window.addEventListener('scroll', setActiveLink);
+setActiveLink();
+// Smooth scrolling for navigation links
+navLinks.forEach(link => {
+link.addEventListener('click', function(e) {
+e.preventDefault();
+const targetId = this.getAttribute('href');
+const targetSection = document.querySelector(targetId);
+window.scrollTo({
+top: targetSection.offsetTop - 80,
+behavior: 'smooth'
+});
+});
+});
+});
+</script>
+<script id="tabSwitcher">
+document.addEventListener('DOMContentLoaded', function() {
+const tabButtons = document.querySelectorAll('.tab-button');
+tabButtons.forEach(button => {
+button.addEventListener('click', function() {
+tabButtons.forEach(btn => btn.classList.remove('active'));
+this.classList.add('active');
+});
+});
+});
+</script>
+</body>
+</html>
